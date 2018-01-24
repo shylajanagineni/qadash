@@ -25,3 +25,10 @@ npm start
 
 check the file for new setup 
 http://kbroman.org/github_tutorial/pages/init.html
+
+Trouble shooting:
+git remote -v
+git remote rm origin
+git remote -v
+git remote add origin https://github.com/shylajanagineni/qadash.git
+git push --set-upstream origin master
