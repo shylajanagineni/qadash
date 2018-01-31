@@ -1,1 +1,88 @@
-<html>Test Repository</html>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<!-- The rest of your page's header here -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+</head>
+<body> 
+<div id="chart-container", align="center">
+        <p>The chart will render here!</p>
+<script type="text/javascript">
+var spreadsheetId = "1-QIXXN6EvPBm6kVV9on-YSpjv05R0-Ehx_dAsCNEbYQ",
+    url = "https://spreadsheets.google.com/feeds/list/" +
+          spreadsheetId +
+          "/1/public/basic?alt=json";
+
+$.get({
+  url: url,
+  success: function(response) {
+    var data = response.feed.entry,
+    len = data.length,
+    i = 0,
+    parsedData = [];
+
+for (i = 0; i < len; i++) {
+    var content = data[i].content.$t
+  parsedData.push({
+    label: data[i].title.$t,
+    value: content.slice(content.indexOf('scenariosquantity')+19, content.indexOf('automated')-2)
+  });
+}
+new FusionCharts({
+  type: 'bar2d',
+  renderAt: 'chart-container',
+  width: '70%',
+  height: '600',
+  dataFormat: 'json',
+  dataSource: {
+    "chart": {
+      "caption": "Feature wise test cases (" + parsedData.reduce(function (a,b){return a+parseInt(b.value)}, 0) + ")",
+      "captionFontBold": "1",
+      "captionFontSize": "20",
+      "yAxisName": "Number of test cases",
+      "numberPrefix": "",
+            // general chart configuration
+              "baseFont": "Open Sans",
+              "paletteColors": "#2AA992",
+              "plotFillAlpha": "700",
+              "usePlotGradientColor": "0",
+              "bgcolor": "#202C3D",
+              "bgalpha": "95",
+              "canvasbgalpha": "0",
+              "basefontcolor": "#F7F3E7",
+              "showAlternateHGridColor": "0",
+              "divlinealpha": "50",
+              "divlinedashed": "0",
+              "rotateyaxisname": "1",
+              "canvasbordercolor": "#FFF",
+              "canvasborderthickness": ".3",
+              "canvasborderalpha": "100",
+              "showValues": "0",
+              "plotSpacePercent": "20",
+              "showPlotBorder": "1",
+              "plotBorderColor": "#2AA992",
+              "plotBorderThickness": "1",
+              "labelFontSize": "20",
+              "outCnvBaseFontSize": "15",
+
+              // tooltip configuration
+              "toolTipBgColor": "#000",
+              "toolTipPadding": "12",
+              "toolTipBorderRadius": "3",
+              "toolTipBorderThickness": "1",
+              "toolTipBorderColor": "#ccc",
+              "toolTipBgAlpha": "60",
+              "plotToolText": "<div class='plotToolText'>$label: $dataValue</div>"
+    },
+  "data": parsedData
+  }
+}).render();
+console.log(data)
+  }
+});
+ </script> 
+</div>      
+</body>
+</html> 
