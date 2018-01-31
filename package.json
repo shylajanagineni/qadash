@@ -24,6 +24,8 @@
     "markdown": "~0.4"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "plotly": "^1.0.6",
+    "xlsx-chart": "^0.3.0"
   }
 }
