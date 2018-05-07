@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<!-- The rest of your page's header here -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+</head>
+<body> 
+<div id="chart-container", align="center">
+        <p>The chart will render here!</p>
+<script type="text/javascript">
+var spreadsheetId = "1-QIXXN6EvPBm6kVV9on-YSpjv05R0-Ehx_dAsCNEbYQ",
+    url = "https://spreadsheets.google.com/feeds/list/" +
+          spreadsheetId +
+          "/1/public/basic?alt=json";
+
+$.get({
+  url: url,
+  success: function(response) {
+              var data = response.feed.entry,
+              len = data.length,
+              i = 0,
+              parsedData = [];
+              categorySet =[];
+              dataSet1 = [];
+              dataSet2 = [];
+              console.log(data)
+              for (i = 0; i < len; i++) {
+                  var content = data[i].content.$t
+                  parsedData.push({
+                      label: data[i].title.$t,
+                      value: [content.slice(content.indexOf('scenariosquantity')+19, content.indexOf('automated')-2)]
+                  });
+                  categorySet.push({
+                    label: data[i].title.$t
+                  });     
+                  dataSet1.push({
+                      value: content.slice(content.indexOf('scenariosquantity')+19, content.indexOf('automated')-2)
+                  }); 
+                  dataSet2.push({
+                      value: content.slice(content.indexOf('automated')+11, content.indexOf('p0pending')-2)
+                  });    
+              }
+
+new FusionCharts({
+  type: 'mscolumn3d',
+  renderAt: 'chart-container',
+  width: '90%',
+  height: '600',
+  dataFormat: 'json',
+  dataSource: {
+ 
+    "chart": {
+        "palette": "1",
+        "caption": "Total Vs Automated Test Cases ",//(" + parsedData.reduce(function (a,b){return a+parseInt(b.value)}, 0) + ")",
+        "subcaption": "",
+        "xAxisName": "Feature",
+        "yAxisName": "",
+        "numberprefix": "#",
+        "showvalues": "0",
+        "legendshadow": "0",
+        "legendborderalpha": "0",
+        "yaxismaxvalue": "60",
+        "legendbgcolor": "FFFFFF",
+        "plottooltext": ""
+    },
+    "categories": [
+        {
+            "category": categorySet
+        }
+    ],
+    "dataset": [
+        {
+            "seriesname": "Total",
+            "color": "005476",
+            "data": dataSet1            
+        },
+        {
+            "seriesname": "Automated",
+            "color": "a1c74a",
+            "data": dataSet2
+        }
+    ]
+  }
+}).render();
+  }
+});
+ </script> 
+</div>      
+</body>
+</html> 

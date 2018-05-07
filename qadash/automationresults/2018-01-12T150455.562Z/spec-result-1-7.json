@@ -1,0 +1,17 @@
+{
+  "cid": "1-7",
+  "spec": ".testlib/tests/omniture.test.js",
+  "specHash": "d0ad7a5f792451a444b9cf120fd8e29f",
+  "screenshotDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z/screenshots",
+  "outputDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z",
+  "capabilities": {
+    "name": "firefox",
+    "browserName": "firefox",
+    "maxInstances": 1,
+    "acceptInsecureCerts": true
+  },
+  "startTime": "2018-01-12T23:05:09.086Z",
+  "endTime": "2018-01-12T23:05:09.109Z",
+  "_duration": 23,
+  "suites": []
+}

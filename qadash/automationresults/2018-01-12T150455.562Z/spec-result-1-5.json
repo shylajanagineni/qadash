@@ -1,0 +1,17 @@
+{
+  "cid": "1-5",
+  "spec": ".testlib/tests/checkout.test.js",
+  "specHash": "248b6adc786e05acf76bbe82a7bc9e23",
+  "screenshotDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z/screenshots",
+  "outputDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z",
+  "capabilities": {
+    "name": "firefox",
+    "browserName": "firefox",
+    "maxInstances": 1,
+    "acceptInsecureCerts": true
+  },
+  "startTime": "2018-01-12T23:05:08.032Z",
+  "endTime": "2018-01-12T23:05:08.054Z",
+  "_duration": 22,
+  "suites": []
+}

@@ -1,0 +1,29 @@
+{
+  "cid": "0-0",
+  "spec": ".testlib/tests/account.test.js",
+  "specHash": "ee1c59bec6f2a3d41bca6ee1d2769395",
+  "screenshotDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z/screenshots",
+  "outputDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z",
+  "capabilities": {
+    "name": "chrome",
+    "browserName": "chrome",
+    "maxInstances": 1,
+    "chromeOptions": {
+      "args": [
+        "disable-infobars",
+        "--disable-extensions",
+        "--test-type"
+      ],
+      "prefs": {
+        "credentials_enable_service": false,
+        "profile": {
+          "password_manager_enabled": false
+        }
+      }
+    }
+  },
+  "startTime": "2018-01-12T23:05:05.437Z",
+  "endTime": "2018-01-12T23:05:05.457Z",
+  "_duration": 20,
+  "suites": []
+}

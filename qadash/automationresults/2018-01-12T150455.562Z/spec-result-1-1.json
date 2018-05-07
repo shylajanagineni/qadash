@@ -1,0 +1,17 @@
+{
+  "cid": "1-1",
+  "spec": ".testlib/tests/cart-promo.test.js",
+  "specHash": "c162cce32d17a4acdc4dfce22e8155cb",
+  "screenshotDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z/screenshots",
+  "outputDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z",
+  "capabilities": {
+    "name": "firefox",
+    "browserName": "firefox",
+    "maxInstances": 1,
+    "acceptInsecureCerts": true
+  },
+  "startTime": "2018-01-12T23:05:05.962Z",
+  "endTime": "2018-01-12T23:05:05.986Z",
+  "_duration": 24,
+  "suites": []
+}

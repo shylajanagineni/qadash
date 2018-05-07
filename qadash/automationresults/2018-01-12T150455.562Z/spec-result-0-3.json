@@ -1,0 +1,29 @@
+{
+  "cid": "0-3",
+  "spec": ".testlib/tests/checkout-buttons-cc.test.js",
+  "specHash": "f7dc642599d6da09e0aafbfafe2ea66c",
+  "screenshotDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z/screenshots",
+  "outputDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z",
+  "capabilities": {
+    "name": "chrome",
+    "browserName": "chrome",
+    "maxInstances": 1,
+    "chromeOptions": {
+      "args": [
+        "disable-infobars",
+        "--disable-extensions",
+        "--test-type"
+      ],
+      "prefs": {
+        "credentials_enable_service": false,
+        "profile": {
+          "password_manager_enabled": false
+        }
+      }
+    }
+  },
+  "startTime": "2018-01-12T23:05:06.998Z",
+  "endTime": "2018-01-12T23:05:07.019Z",
+  "_duration": 21,
+  "suites": []
+}

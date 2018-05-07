@@ -1,0 +1,29 @@
+{
+  "cid": "0-7",
+  "spec": ".testlib/tests/omniture.test.js",
+  "specHash": "d0ad7a5f792451a444b9cf120fd8e29f",
+  "screenshotDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z/screenshots",
+  "outputDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z",
+  "capabilities": {
+    "name": "chrome",
+    "browserName": "chrome",
+    "maxInstances": 1,
+    "chromeOptions": {
+      "args": [
+        "disable-infobars",
+        "--disable-extensions",
+        "--test-type"
+      ],
+      "prefs": {
+        "credentials_enable_service": false,
+        "profile": {
+          "password_manager_enabled": false
+        }
+      }
+    }
+  },
+  "startTime": "2018-01-12T23:05:09.088Z",
+  "endTime": "2018-01-12T23:05:09.110Z",
+  "_duration": 22,
+  "suites": []
+}

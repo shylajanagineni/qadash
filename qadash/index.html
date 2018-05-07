@@ -1,7 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
+body {
+    font-family: "Lato", sans-serif;
+}
+.mySlides {display:none;}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 28px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
 .button {
     background-color: #4CAF50;
     border: none;
@@ -14,19 +46,180 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+#main {
+    transition: margin-left .3s;
+    padding: 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 12px;}
+  .sidenav a {font-size: 12px;}
+}
+
+.dropbtn {
+    color: white;
+    padding: 12px;
+    font-size: 12px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 20px;
+    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    position: relative;
+    color: black;
+    padding: 8px 12px;
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 </style>
+<script src="excelapi.js"></script>
 </head>
 <body>
-<h2 align="center">Welcome to IRIS QA Dashboard</h2>
-<div align="center">
-<a href="defects.html" class="button">Defects</a>
-<a href="testrepo.html" class="button">Test cases</a>
-<a href="automation.html" class="button">Automation</a>
-<a href="http://sonar.fanaticslabs.com/" class="button">SonarQube</a>
-<a href="lpt.html" class="button">LPT</a>
-<a href="https://rapid.qc.frgcloud.com/" class="button">Build Deploy</a>
-<a href="visual.html" class="button">VisualRegression</a>
-<a href="https://jira.fanatics.com/secure/RapidBoard.jspa?rapidView=323&projectKey=TCFEDGE&view=planning&selectedIssue=TCFEDGE-2211" class="button">Sprint</a>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  <a href="https://jira.fanatics.com/plugins/servlet/Wallboard/?dashboardId=20231" target="content">Defects</a>
+  <!--<a href="https://jira.fanatics.com/secure/Dashboard.jspa?selectPageId=20231#" target="content">Defects</a>-->
+  <a href="testcases.html" target ="content">Test cases</a>
+
+  <div class = "dropdown"><a href="#" class="dropbtn" >Automation</a>
+    <div class="dropdown-content">
+        <a target ="content" id="autostats">Automated Test Cases</a>
+        <a target ="content" id="autoresults">Automation Execution</a>
+    </div>
+  </div>
+  <a href="http://127.0.0.1:8080/addItem.sh" target ="content">Add Item</a>
+
+  <div class = "dropdown"><a href="#" class="dropbtn" >Releases</a>
+    <div class="dropdown-content">
+        <a href="https://jira.fanatics.com/plugins/servlet/Wallboard/?dashboardId=20209" target ="content">IRIS All</a>
+        <a href="https://jira.fanatics.com/plugins/servlet/Wallboard/?dashboardId=20323" target ="content">IRIS RolledBack</a>
+        <a href="https://jira.fanatics.com/plugins/servlet/Wallboard/?dashboardId=20322" target ="content">Juno All</a>
+        <a href="" target ="content">Juno RolledBack</a>
+    </div>
+  </div>
+
+
+  <div class = "dropdown"><a href="#" class="dropbtn" >Build Deploy</a>
+    <div class="dropdown-content">
+        <a href="https://rapid.dev.frgcloud.com/" target ="content">DEV</a>
+        <a href="https://rapid.prod.frgcloud.com/" target ="content">PROD</a>
+        <a href="https://rapid.qc.frgcloud.com/" target ="content">QC</a>
+    </div>
+  </div>
+  <div class = "dropdown"><a href="#" class="dropbtn" >QA Artifacts</a>
+    <div class="dropdown-content">
+            <a href="https://docs.google.com/document/d/1cX7ddbiqT3gGB1Pqv6BXmD5M2NuWG02MDtJoRPugmf8/edit" target ="content">QA Startup Guide</a>
+            <a href="https://docs.google.com/spreadsheets/d/1-QIXXN6EvPBm6kVV9on-YSpjv05R0-Ehx_dAsCNEbYQ/edit#gid=2037300549" target ="content">Test Case Sheet</a>
+        <a href="https://docs.google.com/spreadsheets/d/1FSlenqwxEAno7hThxFKfRLVo8h0dNebCdc6cwjGCkv8/edit#gid=711255404" target ="content">Release Sheet</a>
+    </div>
+  </div>
+  <a href="https://wiki.fanatics.com/display/3CIR/IRIS-QA" target="_blank">QA - Wiki</a>
+
+  <div class = "dropdown"><a href="#" class="dropbtn">SprintBoard</a>
+    <div class="dropdown-content">
+        <a href="https://jira.fanatics.com/secure/RapidBoard.jspa?rapidView=497&projectKey=CQE&view=planning&selectedIssue=CQE-175" target ="content">QE</a>
+        <a href="#">Tools</a>
+        <a href="https://jira.fanatics.com/secure/RapidBoard.jspa?rapidView=311&projectKey=TCCORE&sprint=2531" target ="content">IRIS</a>
+        <a href="#">Experiments</a>
+    </div>
+  </div>
+  <a href="http://sonar.fanaticslabs.com/" target ="_blank">SonarQube</a>
+  <a href="https://saucelabs.com/" target="_blank" >SauceLabs</a>
+  <a href="lpt.html" target="_blank">LPT TBD</a>
+  <a href="visual.html" target="_blank">VisualRegression TBD</a>
+
 </div>
+<div id="main" align="center">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  <h2>Welcome to Quality Assurance Dashboard</h2>
+  <h4 id='irisprodversion'></h4>   
+  <h4 id='dsversion'></h4>
+  <h4 id='reltracker'></h4>
+  <iframe align="middle" name ="content" width="800" height="500" frameborder="0">
+  </iframe>
+  <div class="w3-content w3-section">
+    <img class="mySlides" src="QA Release Process.png" style="width:50%">
+    <img class="mySlides" src="QA Test Execution Process.png" style="width:50%">  
+  </div>
+</div>
+
+<!-- src="QA src="QA Release Process.png" Test Execution Process.png"  -->
+<script type="text/javascript">
+    var spreadsheetId = "1FSlenqwxEAno7hThxFKfRLVo8h0dNebCdc6cwjGCkv8",
+    url = "https://spreadsheets.google.com/feeds/list/" +
+              spreadsheetId +
+              "/1/public/basic?alt=json";
+    var irisprodversion;
+    var dsversion
+    var releasetracker
+    var automation
+    var myIndex = 0;
+    carousel();
+    $.get({
+        url: url,
+        success: function(response) {
+          console.log(response);
+          var data = response.feed.entry,
+          len = data.length,
+          content = data[len-1].content.$t;
+          if(content.split(",")[0].split(":")[0] != "irisprodversion"){content = data[len-2].content.$t;}
+          irisprodversion = content.split(",")[0].split(":")[2]
+          dsversion = content.split(",")[1].split(":")[1]
+          reltracker = content.split(",")[4].split(" ")[2]
+          automation = content.split(",")[5].split(" ")[2]
+          console.log(automation)
+          document.getElementById('irisprodversion').innerText= "IRIS Current Prod Version : " + irisprodversion
+          document.getElementById('dsversion').innerText= "DS Current Prod Version : " + dsversion
+          document.getElementById('reltracker').innerText= "IRIS Current Release Tracker : " +reltracker
+          document.getElementById('autoresults').href= automation
+          document.getElementById('autostats').href= "automationstats.html"
+        }
+    });
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+</script>
 </body>
-</html>
+</html> 

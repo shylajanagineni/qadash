@@ -18,22 +18,23 @@ var spreadsheetId = "1-QIXXN6EvPBm6kVV9on-YSpjv05R0-Ehx_dAsCNEbYQ",
 $.get({
   url: url,
   success: function(response) {
-    var data = response.feed.entry,
-    len = data.length,
-    i = 0,
-    parsedData = [];
-
-for (i = 0; i < len; i++) {
-    var content = data[i].content.$t
-  parsedData.push({
-    label: data[i].title.$t,
-    value: content.slice(content.indexOf('scenariosquantity')+19, content.indexOf('automated')-2)
-  });
-}
+              var data = response.feed.entry,
+              len = data.length,
+              i = 0,
+              parsedData = [];
+              for (i = 0; i < len; i++) {
+                  var content = data[i].content.$t
+                  console.log(content.slice(content.indexOf('scenariosquantity')+19, content.indexOf('automated')-2))
+                  parsedData.push({
+                      label: data[i].title.$t,
+                      value: content.slice(content.indexOf('scenariosquantity')+19, content.indexOf('automated')-2)
+                  });
+          }
+          console.log(parsedData)
 new FusionCharts({
   type: 'bar2d',
   renderAt: 'chart-container',
-  width: '70%',
+  width: '90%',
   height: '600',
   dataFormat: 'json',
   dataSource: {

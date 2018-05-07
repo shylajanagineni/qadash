@@ -1,0 +1,393 @@
+[15:04:58] [ INFO] Test run id: fdd999bd-cec3-4f4b-bef7-385a02714832
+
+[15:04:58] [ INFO] ----------
+[15:04:58] [ INFO] selenium-standalone installation starting
+[15:04:58] [ INFO] ----------
+[15:04:58] [ INFO] 
+[15:04:58] [ INFO] ---
+[15:04:58] [ INFO] selenium install:
+[15:04:58] [ INFO] from: https://selenium-release.storage.googleapis.com/3.4/selenium-server-standalone-3.4.0.jar
+[15:04:58] [ INFO] to: /Users/snagineni/Documents/automation/clockwork/node_modules/drivers/selenium-server/3.4.0-server.jar
+[15:04:58] [ INFO] ---
+[15:04:58] [ INFO] chrome install:
+[15:04:58] [ INFO] from: https://chromedriver.storage.googleapis.com/2.33/chromedriver_mac64.zip
+[15:04:58] [ INFO] to: /Users/snagineni/Documents/automation/clockwork/node_modules/drivers/chromedriver/2.33-x64-chromedriver
+[15:04:58] [ INFO] ---
+[15:04:58] [ INFO] firefox install:
+[15:04:58] [ INFO] from: https://github.com/mozilla/geckodriver/releases/download/v0.17.0/geckodriver-v0.17.0-macos.tar.gz
+[15:04:58] [ INFO] to: /Users/snagineni/Documents/automation/clockwork/node_modules/drivers/geckodriver/0.17.0-x64-geckodriver
+[15:05:04] [ INFO] 
+[15:05:04] [ INFO] 
+[15:05:04] [ INFO] -----
+[15:05:04] [ INFO] selenium-standalone installation finished
+[15:05:04] [ INFO] -----
+A service failed in the 'onPrepare' hook
+Error: Selenium server did not start.Another Selenium process may already be running or your java version may be out of date.
+    at ChildProcess.errorIfNeverStarted (/Users/snagineni/Documents/automation/clockwork/node_modules/selenium-standalone/lib/start.js:141:15)
+    at emitTwo (events.js:126:13)
+    at ChildProcess.emit (events.js:214:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:198:12)
+
+Continue...
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+firefox
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+chrome
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+safari
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+chrome
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+firefox
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+safari
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+firefox
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+chrome
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+safari
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+chrome
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+firefox
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+safari
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+firefox
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+chrome
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+safari
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+firefox
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+chrome
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+safari
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+firefox
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+chrome
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+safari
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+firefox
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+chrome
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+safari
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+safari
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+chrome
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+ERROR: connect ECONNREFUSED 127.0.0.1:4444
+firefox
+    at new RuntimeError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/ErrorHandler.js:144:12)
+    at Request._callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/build/lib/utils/RequestHandler.js:327:43)
+    at self.callback (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (/Users/snagineni/Documents/automation/clockwork/node_modules/webdriverio/node_modules/request/request.js:878:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+
+
+
+==================================================================
+Number of specs: 27
+
+
+Test logs at: /Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z/test.log
+
+
+Html report at /Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z/index.html
+

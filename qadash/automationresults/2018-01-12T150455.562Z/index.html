@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clockwork results</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./test-results.js"></script>
+    <script src="./utils.js"></script>
+    <script src="https://fb.me/react-15.0.0.js"></script>
+    <script src="https://fb.me/react-dom-15.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <h1>Clockwork results</h1>
+      </div>
+    </div>
+    <div class="container" id="main">
+    </div>
+    <script type="text/babel">
+      const symbols = {
+        pass: '✓',
+        fail: '×',
+        pending: '-'
+      }
+      class Test extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = {showMore: false}
+          this.showMore = this.showMore.bind(this)
+        }
+
+        showMore() {
+          this.setState({showMore: !this.state.showMore})
+        }
+
+        render() {
+          const test  = this.props
+          const filename = (test.spec || '').split('/').pop()
+          return (
+            <li className={`test ${this.props.state}`}>
+              <div className='details' onClick={this.showMore}>
+                <span className='status'>{symbols[test.state]}</span>
+                <span>{this.props.title}</span>
+                <span className='runtime'>{toSeconds(this.props._duration)} </span>
+                <span className='runtime'>
+                  {this.props.showFile ? filename : ''}
+                </span>
+              </div>
+              {this.renderError()}
+              {this.renderScreenshots()}
+            </li>
+          )
+        }
+
+        renderError() {
+          if (this.props.error && this.state.showMore) {
+            return (
+              <div>
+                <pre>
+                  {this.props.error.message} <br/>
+                  {this.props.error.stack}
+                </pre>
+              </div>
+            )
+          }
+
+          return null
+        }
+
+        renderScreenshots() {
+          const shots = this.props.screenshots
+          if (shots.length !== 0 && this.state.showMore) {
+            return (
+              <div>{
+                  shots.map((filename, i) => {
+                    return <img src={'screenshots/' + filename} key={i}/>
+                  })
+                }
+              </div>
+            )
+          }
+
+          return null
+        }
+      }
+
+      class Suite extends React.Component {
+        constructor(props) {
+          super(props)
+        }
+        render() {
+          return (
+            <div className="suite">
+              <h5>{this.props.title}</h5>
+                <ul> {
+                  this.props.tests.map((test, i) => {
+                    return <Test {...test} key={i}/>
+                  })
+                }
+                </ul>
+            </div>
+          )
+        }
+      }
+
+      class Spec extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = {showSuites: false}
+
+          this.toggleSuites = this.toggleSuites.bind(this)
+        }
+
+        toggleSuites() {
+          this.setState({showSuites: !this.state.showSuites})
+        }
+
+        render() {
+          const summary = getSpecSummary(this.props)
+          return (
+            <div className="spec">
+              <h3 onClick={this.toggleSuites}>
+                <span className="title">{this.props.spec}</span>
+                <span className="label">{summary.browser} </span>
+                <span className="pass">{symbols.pass}{summary.pass}</span>
+                <span className="fail">
+                  {summary.fail === 0 ? '' : symbols.fail + summary.fail}
+                </span>
+                <span className="pending">{symbols.pending}{summary.pending}</span>
+                <span className="runtime">{toSeconds(this.props._duration)} </span>
+              </h3>
+              {this.renderSuites()}
+            </div>
+          )
+        }
+
+        renderSuites() {
+          if (this.state.showSuites) {
+            return (
+              <div className="suites"> {
+                  this.props.suites.map((suite, i) => {
+                    return <Suite {...suite} key={i}/>
+                  })
+                }
+              </div>
+            )
+          }
+          return null
+        }
+      }
+
+      class Home extends React.Component {
+        constructor(props) {
+          super(props)
+        }
+        render() {
+          const testStats = getSummary(this.props.results)
+          const details = this.props.details
+          const failTests = getFailTests(this.props.results)
+          const specs = getSpecs(this.props.results)
+
+          return (
+            <div>
+              <div className="summary-wrapper">
+                <div className="stats">
+                  <div className="stat summary">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Specs</td>
+                          <td>{specs.length}</td>
+                        </tr>
+                        <tr>
+                          <td>Browsers</td>
+                          <td>{details.capabilities.join('\n').toUpperCase()}</td>
+                        </tr>
+                        <tr>
+                          <td>Runtime</td>
+                          <td>{toSeconds(this.props.details.duration)}</td>
+                        </tr>
+                        <tr>
+                          <td>Start time</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                          <td>logs</td>
+                          <td><a target="_blank" href="./test.log">test.log</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="stat pass">
+                    <h4>{testStats.pass}</h4>
+                    <span>passed</span>
+                  </div>
+                  <div className="stat fail">
+                    <h4>{testStats.fail}</h4>
+                    <span>failed</span>
+                  </div>
+                  <div className="stat skip">
+                    <h4>{testStats.pending}</h4>
+                    <span>skipped</span>
+                  </div>
+                </div>
+              </div>
+              {this.renderFailTests(failTests)}
+
+              {
+                this.props.results.map(result => {
+                  return <Spec {...result} key={result.cid}/>
+                })
+              }
+
+              <div className="command">
+                <span>{details.command}</span>
+              </div>
+            </div>
+          )
+        }
+
+        renderFailTests(tests) {
+          if (tests.length === 0) {
+            return null
+          }
+
+          return (
+            <div className="fail-test-wrapper">
+              <h4>Failed tests - # {tests.length}</h4>
+              <ul>
+                {
+                  tests.map((test, i) => {
+                    return <Test {...test} key={i} showFile/>
+                  })
+                }
+              </ul>
+            </div>
+          )
+        }
+      }
+
+      const results = window._data.results
+      const details = window._data.details
+      const screenshotDir = (results[0] || {}).screenshotDir
+      ReactDOM.render(
+        <Home results={results} details={details}/>,
+        document.getElementById('main')
+      );
+    </script>
+  </body>
+</html>

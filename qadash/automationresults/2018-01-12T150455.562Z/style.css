@@ -1,0 +1,163 @@
+body {
+  background-color: #eee;
+  font-size: 14px;
+  font-family: monospace;
+  margin:0;
+}
+
+h3 {
+  font-size: inherit;
+  margin: 0px 0;
+  padding: 5px 0 10px;
+}
+
+h5 {
+  margin: 10px 0;
+  font-size: inherit;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  padding-left: 20px;
+}
+
+.header {
+  background-color: #0f3f65;
+  color: white;
+  padding: 5px 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.container {
+  width: 850px;
+  margin: 0 auto;
+}
+
+.label {
+  padding-left: 30px;
+  color: #3F51B5;
+}
+
+/** summary */
+.stats {
+  display: flex;
+}
+
+.stat.summary {
+  flex:3;
+  padding-left: 0;
+  padding-right: 0;
+  color: #03332f;
+}
+
+.stat.summary td {
+  text-align: left;
+  padding-right: 30px;
+  padding-top: 5px;
+  white-space: pre;
+  vertical-align: top;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+  padding: 30px;
+}
+.stat h4 {
+  font-size: 70px;
+  margin: 0;
+  color: #4CAF50;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+.stat.fail h4 {color: #F44336;}
+.stat.skip h4 {color: #607D8B;}
+.stat span {
+  background-color: #e6e6e6;
+  color: #807b6c;
+  padding: 5px;
+  border-radius: 3px;
+  width: 115px;
+  display: inline-block;
+}
+
+.fail-test-wrapper {
+  padding-bottom: 30px;
+}
+
+.spec {
+  margin-bottom: 5px;
+}
+.spec .suites {padding: 0px 0 25px;}
+.spec h3:hover {cursor: pointer;}
+.spec h3 .title {color: blue; text-decoration: underline;}
+
+.spec h3 .pass, .spec h3 .fail, .spec h3 .pending {
+  padding-left: 25px;
+  color: #4CAF50;
+}
+
+.spec h3 .fail {color: red;}
+.spec h3 .pending {color: gray;}
+
+.suite {
+  padding-left: 20px;
+}
+
+.test div.details {
+  padding: 0px 5px 5px;
+  font-size: inherit;
+  margin-left: -5px;
+}
+
+.test.fail div.details:hover {
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+.test .status {
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+  width: 12px;
+  padding: 0 3px;
+  background-color: #4CAF50;
+}
+
+.test.fail .status {
+  background-color: red;
+  padding-left: 4px;
+  padding-right: 2px;
+}
+
+.test.pending .status {
+  background-color: gray;
+  padding-left: 6px;
+  padding-right: 0;
+}
+
+.test pre {
+  background-color: #eaeaea;
+  padding: 5px;
+}
+
+.test img {max-width: 800px;}
+
+span.runtime {
+  color: #ccc4b9;
+  padding-left: 20px;
+}
+
+.command {
+  padding: 10px 12px;
+  border: 1px solid #b8bbd0;
+  border-radius: 5px;
+  background-color: #dcdfea;
+  margin-top: 30px;
+}

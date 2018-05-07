@@ -1,0 +1,19 @@
+{
+  "cid": "2-6",
+  "spec": ".testlib/tests/end-to-end.test.js",
+  "specHash": "82dc8c186c61479851e34797bbbc7d7a",
+  "screenshotDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z/screenshots",
+  "outputDir": "/Users/snagineni/Documents/automation/clockwork/outputs/2018-01-12T150455.562Z",
+  "capabilities": {
+    "name": "safari",
+    "browserName": "safari",
+    "maxInstances": 1,
+    "safari.options": {
+      "cleanSession": true
+    }
+  },
+  "startTime": "2018-01-12T23:05:08.567Z",
+  "endTime": "2018-01-12T23:05:08.590Z",
+  "_duration": 23,
+  "suites": []
+}
